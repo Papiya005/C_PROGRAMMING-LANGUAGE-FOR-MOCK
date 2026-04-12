@@ -33,23 +33,38 @@
 
 // }
 // take two parameters and   make a function called 'sum'return their sum;
-#include<stdio.h>
-int sum(int a,int b){
-  int sum=a+b;
-  return sum;
+// #include<stdio.h>
+// int sum(int a,int b){
+//   int sum=a+b;
+//   return sum;
+// }
+// int main(){
+//   int a;
+//   printf("Enter the value of a:\n");
+//   scanf("%d",&a);
+//   int b;
+//   printf("Enter the value of b:\n");
+//   scanf("%d",&b);
+// int result=sum(a,b);
+//  printf("The sum of %d and %d is:%d\n",a,b,result);
+// }
+
+
+
+
+// return the table of user taken integer number using function
+
+#include <stdio.h>
+void printTable(int a){
+for(int i=1;i<=10;i++){
+  int multiply=a*i;
+  printf("%d x %d is %d\n",a,i,multiply);
+}
+
 }
 int main(){
   int a;
-  printf("Enter the value of a:\n");
+  printf("Enter the number taken by the user:");
   scanf("%d",&a);
-  int b;
-  printf("Enter the value of b:\n");
-  scanf("%d",&b);
-int result=sum(a,b);
- printf("The sum of %d and %d is:%d\n",a,b,result);
+  printTable(a);
 }
-
-
-
-
-
