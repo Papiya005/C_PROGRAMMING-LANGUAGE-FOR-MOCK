@@ -67,12 +67,12 @@ void printregion(char* user){
 2. Compile:
 
    ```
-   gcc filename.c -o output
+   gcc filename.c 
    ```
 3. Run:
 
    ```
-   ./output
+   ./a.out
    ```
 
 ---
