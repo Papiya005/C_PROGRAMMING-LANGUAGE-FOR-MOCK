@@ -54,17 +54,49 @@
 
 // return the table of user taken integer number using function
 
-#include <stdio.h>
-void printTable(int a){
-for(int i=1;i<=10;i++){
-  int multiply=a*i;
-  printf("%d x %d is %d\n",a,i,multiply);
-}
+// #include <stdio.h>
+// void printTable(int a){
+// for(int i=1;i<=10;i++){
+//   int multiply=a*i;
+//   printf("%d x %d is %d\n",a,i,multiply);
+// }
 
+// }
+// int main(){
+//   int a;
+//   printf("Enter the number taken by the user:");
+//   scanf("%d",&a);
+//   printTable(a);
+// }
+// take an price by the user and then add the gst near about 18% and then
+// retun the price also
+// #include <stdio.h>
+// void printPrice(float price){
+  
+//   price=price+(price*18/100);
+//   printf("%.2f",price);
+// }
+// int main(){
+//   float price;
+//   printf("enter the price taken by the user:");
+//   scanf("%f",&price);
+//   printPrice(price);
+
+// }
+
+// make a power of any interfer taken by the user using in buit function
+
+#include<stdio.h>
+#include<math.h>
+void printPower(int a,int b){
+  int power=pow(a,b);
+  printf("%d",power);
 }
 int main(){
-  int a;
-  printf("Enter the number taken by the user:");
+  int a,b;
+  printf("Enter any number for base  and exponent:");
   scanf("%d",&a);
-  printTable(a);
+  scanf("%d",&b);
+  printPower(a,b);
+
 }
