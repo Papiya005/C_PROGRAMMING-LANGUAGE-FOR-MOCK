@@ -148,21 +148,37 @@
 // }
 // question no 30 
 // sum of n natural number using recursion method in c programming language
-#include<stdio.h>
-int printNaturalNumber(int number ,int sum);
+// #include<stdio.h>
+// int printNaturalNumber(int number ,int sum);
+// int main(){
+//   int number=1;
+//   int sum=0;
+//   int result=printNaturalNumber(number,sum);
+//   printf(" sum is %d",result);
+// return 0;
+// }
+// int printNaturalNumber(int number,int sum){
+// //base case
+// if(number>10){
+//   return sum;
+// }
+//   sum= sum+number;
+//    return printNaturalNumber(number+1,sum);
+   
+// }
+// print the factorial of n natural numbers
+
+#include <stdio.h>
+int printFactorial(int n);
 int main(){
-  int number=1;
-  int sum=0;
-  int result=printNaturalNumber(number,sum);
-  printf(" sum is %d",result);
+  int n=12;
+ printf("factorial of %d is %d",n,printFactorial(n)); 
 return 0;
 }
-int printNaturalNumber(int number,int sum){
-//base case
-if(number>10){
-  return sum;
-}
-  sum= sum+number;
-   return printNaturalNumber(number+1,sum);
-   
+int printFactorial(int n){
+  //base case
+  if(n==0){
+    return 1;
+  }
+  return n*printFactorial(n-1);
 }
