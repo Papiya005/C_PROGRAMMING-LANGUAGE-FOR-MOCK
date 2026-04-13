@@ -184,19 +184,73 @@
 // }
 
 // write a function to  convert celsius to fahrenheit
-#include<stdio.h>
-float printctof(float celsius);
-int main(){
-  float celsius;
-  printf("Enter the celsius that will convert into fahrenheit:");
-  scanf("%f",&celsius);
-  printf("the fahrenheit temperature is %.2f",printctof(celsius));
-  return 0;
-}
-float printctof(float celsius){
-  //c/5=(f-32)/9;
-  // f=(9*c/5)+32;
-  float fahrenheit=(9*celsius/5)+32;
-  return fahrenheit;
+// #include<stdio.h>
+// float printctof(float celsius);
+// int main(){
+//   float celsius;
+//   printf("Enter the celsius that will convert into fahrenheit:");
+//   scanf("%f",&celsius);
+//   printf("the fahrenheit temperature is %.2f",printctof(celsius));
+//   return 0;
+// }
+// float printctof(float celsius){
+//   //c/5=(f-32)/9;
+//   // f=(9*c/5)+32;
+//   float fahrenheit=(9*celsius/5)+32;
+//   return fahrenheit;
 
+// }
+// write a function to calculate percentage of a student from marks in science .math and sanskrit
+
+// #include<stdio.h>
+// double printPercentage(int science, int math, int sanskrit);
+// int main(){
+//   int science=98;
+//   int math=97;
+//   int sanskrit=99;
+//   printf("The Percentage of three subject are %f",printPercentage(science, math,sanskrit));
+//   return 0;
+// }
+// double printPercentage(int science, int math, int sanskrit){
+//   return ((science+math+sanskrit)/3);
+// }//
+//write a function to print n terms of the fibonacchi sequesnce//
+// #include<stdio.h>
+// int printFibonacchi(int a,int b,int n);
+// int main(){
+//   int a=0;
+//   int b=1;
+//   int n=10;
+//   printFibonacchi(a,b, n);
+//   return 0;
+// }
+// int printFibonacchi(int a,int b,int n){
+//   int next;
+//   for(int i=1;i<=n;i++){
+//     printf("%d",a);
+//     next=a+b;
+//     a=b;
+//     b=next;
+//   }
+// }
+// using recurstion
+
+#include<stdio.h>
+int printfibonacchiSeq(int n);
+int main(){
+
+  int n=10;
+  printf("%d",printfibonacchiSeq(n));
+  return 0;
+
+}
+int printfibonacchiSeq(int n){
+  //base case
+  if(n==0){
+return 0;
+  }
+  if(n==1){
+    return 1;
+  }
+  return printfibonacchiSeq( n-1)+printfibonacchiSeq( n-2);
 }
