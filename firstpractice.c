@@ -168,17 +168,35 @@
 // }
 // print the factorial of n natural numbers
 
-#include <stdio.h>
-int printFactorial(int n);
+// #include <stdio.h>
+// int printFactorial(int n);
+// int main(){
+//   int n=12;
+//  printf("factorial of %d is %d",n,printFactorial(n)); 
+// return 0;
+// }
+// int printFactorial(int n){
+//   //base case
+//   if(n==0){
+//     return 1;
+//   }
+//   return n*printFactorial(n-1);
+// }
+
+// write a function to  convert celsius to fahrenheit
+#include<stdio.h>
+float printctof(float celsius);
 int main(){
-  int n=12;
- printf("factorial of %d is %d",n,printFactorial(n)); 
-return 0;
+  float celsius;
+  printf("Enter the celsius that will convert into fahrenheit:");
+  scanf("%f",&celsius);
+  printf("the fahrenheit temperature is %.2f",printctof(celsius));
+  return 0;
 }
-int printFactorial(int n){
-  //base case
-  if(n==0){
-    return 1;
-  }
-  return n*printFactorial(n-1);
+float printctof(float celsius){
+  //c/5=(f-32)/9;
+  // f=(9*c/5)+32;
+  float fahrenheit=(9*celsius/5)+32;
+  return fahrenheit;
+
 }
