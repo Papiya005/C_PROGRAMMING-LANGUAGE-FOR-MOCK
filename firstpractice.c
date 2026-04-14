@@ -233,24 +233,24 @@
 //     b=next;
 //   }
 // }
-// using recurstion
+// using recursion
 
-#include<stdio.h>
-int printfibonacchiSeq(int n);
-int main(){
+// #include<stdio.h>
+// int printfibonacchiSeq(int n);
+// int main(){
 
-  int n=10;
-  printf("%d",printfibonacchiSeq(n));
-  return 0;
+//   int n=10;
+//   printf("%d",printfibonacchiSeq(n));
+//   return 0;
 
-}
-int printfibonacchiSeq(int n){
-  //base case
-  if(n==0){
-return 0;
-  }
-  if(n==1){
-    return 1;
-  }
-  return printfibonacchiSeq( n-1)+printfibonacchiSeq( n-2);
-}
+// }
+// int printfibonacchiSeq(int n){
+//   //base case
+//   if(n==0){
+// return 0;
+//   }
+//   if(n==1){
+//     return 1;
+//   }
+//   return printfibonacchiSeq( n-1)+printfibonacchiSeq( n-2);
+// }
