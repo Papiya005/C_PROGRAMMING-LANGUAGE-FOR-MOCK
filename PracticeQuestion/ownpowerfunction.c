@@ -1,3 +1,5 @@
+// write your own power function
+
 #include<stdio.h>
 
 int printpowerfunction(int x,int n);
@@ -16,6 +18,8 @@ int printpowerfunction(int x,int n){
     }
     // when even
     if(n%2==0)
+    // int half=printpowerfunction(x,n/2);
+    //return  half*half
     return printpowerfunction(x,n/2)*printpowerfunction(x,n/2);
     // odd 
     else{
