@@ -1,3 +1,4 @@
+// call by value-swapping of 2 numbers a&b;
 #include<stdio.h>
 void swap(int a,int b);
 int main(){
