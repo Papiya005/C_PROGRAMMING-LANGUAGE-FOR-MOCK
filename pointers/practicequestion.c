@@ -43,17 +43,32 @@
 //     }
 //  }
 //write a program in c programming language to print the all elements in an array in reverse order...
+// #include<stdio.h>
+// void printElement(int arr[], int n);
+// int main(){
+//     int arr[]={1,2,3,4,5,6,7,8,9,10};
+//      int n = sizeof(arr) / sizeof(arr[0]);
+//     printElement(arr,n);
+//     return 0;
+
+// }
+// void printElement(int arr[], int n){
+//     for(int i=n-1;i>=0;i--){
+//         printf("%d ",arr[i]);
+//     }
+// }
+//write a program in c to print all letters in english alphabet using a pointer
 #include<stdio.h>
-void printElement(int arr[], int n);
+// declare the prototype first
+void printAllLetters(char* a);
 int main(){
-    int arr[]={1,2,3,4,5,6,7,8,9,10};
-     int n = sizeof(arr) / sizeof(arr[0]);
-    printElement(arr,n);
+    char a='A';
+    printAllLetters( &a);
     return 0;
 
 }
-void printElement(int arr[], int n){
-    for(int i=n-1;i>=0;i--){
-        printf("%d ",arr[i]);
+void printAllLetters(char* a){
+    for(;*a<='Z';(*a)++){
+printf("% c ",*a);
     }
 }
