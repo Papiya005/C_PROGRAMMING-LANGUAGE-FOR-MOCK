@@ -27,19 +27,45 @@
 // }
 
 // write a function to reverse an array
+// #include<stdio.h>
+// //declaring the prototype
+// void printReverseArray(int arr[],int n);
+// int main(){
+//     int arr[]={1,2,3,4,5,6,7,8,9,10};
+//     printReverseArray(arr,10);
+//     return 0;
+
+// }
+// void printReverseArray(int arr[],int n){
+   
+//     for(int i=n-1;i>=0;i--){
+//         printf("%d\t",arr[i]);
+//     }
+
+// }
+// swapping the array without using any extra space
 #include<stdio.h>
-//declaring the prototype
-void printReverseArray(int arr[],int n);
+//declare the function prototype
+void printSwapp(int arr[],int n);
 int main(){
     int arr[]={1,2,3,4,5,6,7,8,9,10};
-    printReverseArray(arr,10);
+    printSwapp(arr,10);
+    for(int i=0;i<10;i++){
+        printf("%d\t",arr[i]);
+    }
     return 0;
 
 }
-void printReverseArray(int arr[],int n){
-   
-    for(int i=n-1;i>=0;i--){
-        printf("%d\t",arr[i]);
+void printSwapp(int arr[],int n){
+        int st=0;
+        int end=n-1;
+        while(st<=end){
+       int temp=arr[st];
+        arr[st]=arr[end];
+        arr[end]=temp;
+        st++;
+        end--;
+        
+       
     }
-
 }
