@@ -10,7 +10,7 @@ int main(){
     return 0;
 }
 void printArrayElement(int marks[]){
-    scanf("%d", &marks[0]);
+    scanf("%d",&marks[0]);
     // printf("%d\n", marks[0]);
     scanf("%d", &marks[1]);
     // printf("%d\n", marks[1]);

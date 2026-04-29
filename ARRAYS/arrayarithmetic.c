@@ -58,3 +58,4 @@ int main(){
       printf("comparisons= %u\n",ptr==_ptr);
     return 0;
 }
+
