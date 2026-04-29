@@ -96,20 +96,45 @@
 //      return printFibonacci(n-1)+printFibonacci(n-2);
 // }
 // using iteration
+// #include<stdio.h>
+// //declare the prototype
+
+// int main(){
+//     int n;
+//     printf("enter n (n>2):");
+//     scanf("%d",&n);
+//     int fib[n];
+//     fib[0]=0;
+//     fib[1]=1;
+//     for(int i=2;i<n;i++){
+//       fib[i]=fib[i-1]+fib[i-2];//important logic
+//       printf("%d\t",fib[i]);
+//     }
+//     return 0;
+
+// }
+
+
+//print the table about 2&3
 #include<stdio.h>
-//declare the prototype
-
+//prototype declaretion
+void printTable(int arr[][10],int n,int m,int number);
 int main(){
-    int n;
-    printf("enter n (n>2):");
-    scanf("%d",&n);
-    int fib[n];
-    fib[0]=0;
-    fib[1]=1;
-    for(int i=2;i<n;i++){
-      fib[i]=fib[i-1]+fib[i-2];//important logic
-      printf("%d\t",fib[i]);
-    }
-    return 0;
-
+    int arr[2][10];
+    printTable(arr,0,10,2);
+     printTable(arr,1,10,3);
+     //print or first row
+   for(int i=0;i<10;i++){
+    printf("%d\t",arr[0][i]);
+   }
+   printf("\n");
+   for(int i=0;i<10;i++){
+    printf("%d\t",arr[1][i]);
+   }
+return 0;
+}
+void printTable(int arr[][10],int n,int m,int number){
+  for(int i=0;i<m;i++){
+  arr[n][i]=number*(i+1);
+  }
 }
