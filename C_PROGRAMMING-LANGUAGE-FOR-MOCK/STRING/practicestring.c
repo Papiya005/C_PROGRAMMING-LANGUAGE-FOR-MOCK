@@ -28,11 +28,22 @@
 
 // }
 // ask the user to enter their firstname and print it back to them
+// #include<stdio.h>
+// int main(){
+//     char firstname[80];
+//     printf(" enter your first name :");
+//     scanf("%s",firstname);
+//     printf("your firstname is:%s",firstname);
+//     return 0;
+// }
+//also try this with their fullname
 #include<stdio.h>
 int main(){
-    char firstname[80];
-    printf(" enter your first name :");
-    scanf("%s",firstname);
-    printf("your firstname is:%s",firstname);
+    char fullname[79];
+    fgets(fullname,79,stdin);
+    puts(fullname);
+    // printf("enter your fullname:");
+    // scanf("%s",fullname);
+    // printf("your fullname is :%s",fullname);
     return 0;
 }
