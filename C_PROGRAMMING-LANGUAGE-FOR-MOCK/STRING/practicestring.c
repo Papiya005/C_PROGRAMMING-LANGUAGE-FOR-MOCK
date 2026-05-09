@@ -37,13 +37,27 @@
 //     return 0;
 // }
 //also try this with their fullname
+// #include<stdio.h>
+// int main(){
+//     char fullname[79];
+//     fgets(fullname,79,stdin);
+//     puts(fullname);
+//     // printf("enter your fullname:");
+//     // scanf("%s",fullname);
+//     // printf("your fullname is :%s",fullname);
+//     return 0;
+// }
+// string using pointers
 #include<stdio.h>
 int main(){
-    char fullname[79];
-    fgets(fullname,79,stdin);
-    puts(fullname);
-    // printf("enter your fullname:");
-    // scanf("%s",fullname);
-    // printf("your fullname is :%s",fullname);
+    char *canchange="hello world";
+    puts(canchange);
+    canchange="hello";
+    puts(canchange);
+    // if i use the array notation
+    char name[]="hello world";
+    puts(name);
+    name="world";
+    puts(name);
     return 0;
 }
