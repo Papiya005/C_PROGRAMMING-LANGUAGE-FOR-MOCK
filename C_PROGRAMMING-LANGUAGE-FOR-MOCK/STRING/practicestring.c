@@ -48,16 +48,38 @@
 //     return 0;
 // }
 // string using pointers
+// #include<stdio.h>
+// int main(){
+//     char *canchange="hello world";
+//     puts(canchange);
+//     canchange="hello";
+//     puts(canchange);
+//     // if i use the array notation
+//     // can not be reassigned 
+//     char name[]="hello world";
+//     puts(name);
+//     name="world";
+//     puts(name);
+//     return 0;
+// }
+
+
+//49.make a program that inputs the user's name and prints its length
 #include<stdio.h>
+// declare the function prototype
+int printnameLength(char* name);
 int main(){
-    char *canchange="hello world";
-    puts(canchange);
-    canchange="hello";
-    puts(canchange);
-    // if i use the array notation
-    char name[]="hello world";
-    puts(name);
-    name="world";
-    puts(name);
-    return 0;
+    char name[100];
+    fgets(name,100,stdin);
+    int result=printnameLength(name);
+    printf("%d",result);
+
+}
+int printnameLength(char* name){
+    int count=0;
+    while(*name!='\0'&& *name!='\n'){
+        count++;
+        name++;
+    }
+    return count;
 }
