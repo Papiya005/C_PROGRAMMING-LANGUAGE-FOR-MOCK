@@ -65,21 +65,41 @@
 
 
 //49.make a program that inputs the user's name and prints its length
-#include<stdio.h>
-// declare the function prototype
-int printnameLength(char* name);
-int main(){
-    char name[100];
-    fgets(name,100,stdin);
-    int result=printnameLength(name);
-    printf("%d",result);
+// #include<stdio.h>
+// // declare the function prototype
+// int printnameLength(char* name);
+// int main(){
+//     char name[100];
+//     fgets(name,100,stdin);
+//     int result=printnameLength(name);
+//     printf("%d",result);
 
-}
-int printnameLength(char* name){
-    int count=0;
-    while(*name!='\0'&& *name!='\n'){
-        count++;
-        name++;
+// }
+// int printnameLength(char* name){
+//     int count=0;
+//     while(*name!='\0'&& *name!='\n'){
+//         count++;
+//         name++;
+//     }
+//     return count;
+// }
+
+
+// take an input from the user using %c
+#include<stdio.h>
+int main(){
+    char str[100];
+    char ch;
+    int i=0;
+    while(ch!='\n'){
+        scanf("%c",&ch);
+        str[i]=ch;
+      
+        i++;
     }
-    return count;
+    str[i]='\0';// \n replaces with null char
+
+    puts(str);
+    return 0;
+
 }
