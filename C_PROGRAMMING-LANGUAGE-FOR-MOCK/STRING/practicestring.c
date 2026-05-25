@@ -86,20 +86,41 @@
 
 
 // take an input from the user using %c
-#include<stdio.h>
-int main(){
-    char str[100];
-    char ch;
-    int i=0;
-    while(ch!='\n'){
-        scanf("%c",&ch);
-        str[i]=ch;
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     char ch;
+//     int i=0;
+//     while(ch!='\n'){
+//         scanf("%c",&ch);
+//         str[i]=ch;
       
-        i++;
-    }
-    str[i]='\0';// \n replaces with null char
+//         i++;
+//     }
+//     str[i]='\0';// \n replaces with null char
 
-    puts(str);
-    return 0;
+//     puts(str);
+//     return 0;
 
+// }
+
+//salting techniques-salting is basically a process used to protecting the password
+//find the salted form of a password entered by a user if the salt is "123" and added to the end
+#include<stdio.h>
+#include<string.h>
+//declare the function prototye
+void salting(char password[]);
+
+int main(){
+char password[100];
+scanf("%s",password);
+salting(password);
+return 0;
+}
+void salting(char password[]){
+    char salt[]="123";
+  char newpassword[200];
+  strcpy(newpassword,password);
+  strcat(newpassword,salt);
+  puts(newpassword);
 }
