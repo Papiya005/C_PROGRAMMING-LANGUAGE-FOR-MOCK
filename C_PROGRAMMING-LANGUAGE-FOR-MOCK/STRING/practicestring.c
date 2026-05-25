@@ -106,21 +106,44 @@
 
 //salting techniques-salting is basically a process used to protecting the password
 //find the salted form of a password entered by a user if the salt is "123" and added to the end
-#include<stdio.h>
-#include<string.h>
-//declare the function prototye
-void salting(char password[]);
+// #include<stdio.h>
+// #include<string.h>
+// //declare the function prototye
+// void salting(char password[]);
 
+// int main(){
+// char password[100];
+// scanf("%s",password);
+// salting(password);
+// return 0;
+// }
+// void salting(char password[]){
+//     char salt[]="123";
+//   char newpassword[200];
+//   strcpy(newpassword,password);
+//   strcat(newpassword,salt);
+//   puts(newpassword);
+// }
+
+//write a function named slice ,which takes a string and returns a sliced string from index n to m
+#include<stdio.h>
+//declare the function prototype
+void slice(char string[],int n ,int m);
 int main(){
-char password[100];
-scanf("%s",password);
-salting(password);
-return 0;
+    int n,m;
+    char string[100];
+    scanf("%s",string);
+    slice(string,3,6);
+    return 0;
+
 }
-void salting(char password[]){
-    char salt[]="123";
-  char newpassword[200];
-  strcpy(newpassword,password);
-  strcat(newpassword,salt);
-  puts(newpassword);
+void slice(char string[],int n ,int m){
+    char newstr[200];
+    int j=0;
+    for(int i=n;i<=m;i++){
+    newstr[j]=string[i];
+    j++;
+    }
+    newstr[j]='\0';
+    puts(newstr);
 }
