@@ -126,24 +126,46 @@
 // }
 
 //write a function named slice ,which takes a string and returns a sliced string from index n to m
+// #include<stdio.h>
+// //declare the function prototype
+// void slice(char string[],int n ,int m);
+// int main(){
+//     int n,m;
+//     char string[100];
+//     scanf("%s",string);
+//     slice(string,3,6);
+//     return 0;
+
+// }
+// void slice(char string[],int n ,int m){
+//     char newstr[200];
+//     int j=0;
+//     for(int i=n;i<=m;i++){
+//     newstr[j]=string[i];
+//     j++;
+//     }
+//     newstr[j]='\0';
+//     puts(newstr);
+// }
+
+
+// write a  function to count the occurances of vowels in a string
 #include<stdio.h>
 //declare the function prototype
-void slice(char string[],int n ,int m);
+int showVowels(char vowels[]);
 int main(){
-    int n,m;
-    char string[100];
-    scanf("%s",string);
-    slice(string,3,6);
+    char vowels[100];
+    fgets(vowels,100,stdin);
+int count=showVowels(vowels);
+printf(" The occurances of given vowels is :%d",count);
     return 0;
-
 }
-void slice(char string[],int n ,int m){
-    char newstr[200];
-    int j=0;
-    for(int i=n;i<=m;i++){
-    newstr[j]=string[i];
-    j++;
+int showVowels(char vowels[]){
+    int count=0;
+    for(int i=0;vowels[i]!='\0';i++){
+   if(vowels[i]=='a'||vowels[i]=='e'||vowels[i]=='i'||vowels[i]=='o'||vowels[i]=='u'||vowels[i]=='A'||vowels[i]=='E'||vowels[i]=='I'||vowels[i]=='O'||vowels[i]=='U'){
+    count++;
+  }
     }
-    newstr[j]='\0';
-    puts(newstr);
+    return count;
 }
