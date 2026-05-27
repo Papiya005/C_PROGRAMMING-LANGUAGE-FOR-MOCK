@@ -150,22 +150,50 @@
 
 
 // write a  function to count the occurances of vowels in a string
+// #include<stdio.h>
+// //declare the function prototype
+// int showVowels(char vowels[]);
+// int main(){
+//     char vowels[100];
+//     fgets(vowels,100,stdin);
+// int count=showVowels(vowels);
+// printf(" The occurances of given vowels is :%d",count);
+//     return 0;
+// }
+// int showVowels(char vowels[]){
+//     int count=0;
+//     for(int i=0;vowels[i]!='\0';i++){
+//    if(vowels[i]=='a'||vowels[i]=='e'||vowels[i]=='i'||vowels[i]=='o'||vowels[i]=='u'||vowels[i]=='A'||vowels[i]=='E'||vowels[i]=='I'||vowels[i]=='O'||vowels[i]=='U'){
+//     count++;
+//   }
+//     }
+//     return count;
+// }
+
+//practice question 54:check if a given character is prsent in a string or not
 #include<stdio.h>
-//declare the function prototype
-int showVowels(char vowels[]);
+// declare the function prototype
+void presentWord(char str[]);
+
 int main(){
-    char vowels[100];
-    fgets(vowels,100,stdin);
-int count=showVowels(vowels);
-printf(" The occurances of given vowels is :%d",count);
+    char str[100];
+    fgets(str,100,stdin);
+    presentWord(str);
     return 0;
 }
-int showVowels(char vowels[]){
-    int count=0;
-    for(int i=0;vowels[i]!='\0';i++){
-   if(vowels[i]=='a'||vowels[i]=='e'||vowels[i]=='i'||vowels[i]=='o'||vowels[i]=='u'||vowels[i]=='A'||vowels[i]=='E'||vowels[i]=='I'||vowels[i]=='O'||vowels[i]=='U'){
-    count++;
-  }
-    }
-    return count;
+void presentWord(char str[]){
+    int found=0;
+    for(int i=0;str[i]!='\0';i++){
+        if(str[i]=='w'||str[i]=='W'){
+           found=1;
+           break;
+        }
+            }
+            if(found==1){
+                printf("the charater is present");
+            }
+            else{
+                 printf("the charater is not present");
+            }
 }
+
