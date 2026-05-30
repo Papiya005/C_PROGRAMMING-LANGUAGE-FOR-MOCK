@@ -1,0 +1,2 @@
+// make a system that can store information of all students,teachers,stuff of your collgeg in the form of stuctures.
+// you can also make this into a c projwct with other functuonalities like cgpa calculation of students  and storing attendence etc.

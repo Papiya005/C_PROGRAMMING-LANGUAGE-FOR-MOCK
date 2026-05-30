@@ -1,3 +1,4 @@
+// array of structure
 #include<stdio.h>
 #include<string.h>
 //defined the structure

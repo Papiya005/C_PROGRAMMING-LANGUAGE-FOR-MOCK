@@ -6,7 +6,7 @@ struct complexNumber{
 };
 
 int main(){
-    struct complexNumber x1={2,3};
+    struct complexNumber x1={2,3};//real=2,imaginary is 3
     
     struct complexNumber *ptr=&x1;
    
